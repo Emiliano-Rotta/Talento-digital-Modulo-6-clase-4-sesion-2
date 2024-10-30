@@ -36,8 +36,21 @@ app.get('/curso/:nombre',(req, res)=>{
 //http://localhost:3000/curso/javascript?profesor=Emiliano&ayudante=Rodrigo
 })
 
+//pasar por params el lugar
+// app.get('/:lugar', (req, res)=> {
+//     // var lugar = req.params.lugar  es igual a la linea de abajo
+//     var { lugar } = req.params
+//     res.send("el lugar donde estan es " + lugar)
+//    //http://localhost:3000/Santiago
+// })
 
+//pasar por query el lugar
+app.get('/', (req, res)=> {
+    // var lugar = req.query.lugar  //es igual a la linea de abajo
+    var { lugar } = req.query //la palabra lugar es la palabra clave que va entre ? y el =
+    res.send("el lugar donde estan es " + lugar)
 
+})
 
 app.listen(PORT, () =>{
     console.log(`servidor levantado en el puerto ${PORT}`)
