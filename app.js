@@ -49,7 +49,7 @@ app.get('/', (req, res)=> {
     // var lugar = req.query.lugar  //es igual a la linea de abajo
     var { lugar } = req.query //la palabra lugar es la palabra clave que va entre ? y el =
     res.send("el lugar donde estan es " + lugar)
-
+// //http://localhost:3000/?lugar=Santiago
 })
 
 app.listen(PORT, () =>{
